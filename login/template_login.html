@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    .fade-in {
+      animation: fadeIn 1.2s ease-out both;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  <title>Login - jnn travel</title>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-tr from-blue-100 via-blue-200 to-blue-300">
+
+
+  <div class="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 fade-in">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <img src="assets\images\logojnn.png" alt="">
+    </a>
+
+    <h2 class="text-3xl font-bold text-center text-blue-500 mb-6"> Masuk ke jnn travel</h2>
+
+    <form class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Nama Pengguna</label>
+        <input 
+          type="text" 
+          class="w-full px-4 py-2 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition-all"
+          placeholder="namakamu"
+        />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+        <input 
+          type="password" 
+          class="w-full px-4 py-2 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition-all"
+          placeholder="••••••••"
+        />
+      </div>
+
+      <div class="flex items-center justify-between">
+        <label class="flex items-center text-sm text-gray-600">
+          <input type="checkbox" class="rounded border-gray-300 text-blue-500 focus:ring-blue-400"/>
+          <span class="ml-2">Ingat saya</span>
+        </label>
+        <a href="#" class="text-sm text-blue-500 hover:underline">Lupa password?</a>
+      </div>
+
+      <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2.5 rounded-lg transition-colors">
+        Masuk 💙
+      </button>
+    </form>
+
+    <div class="mt-6 text-center text-sm text-gray-600">
+      Belum punya akun?
+      <a href="#" class="text-blue-500 hover:underline font-medium">Daftar sekarang</a>
+    </div>
+  </div>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    const musicStatus = document.getElementById("music-status");
+
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+        musicStatus.textContent = "On";
+      } else {
+        music.pause();
+        musicStatus.textContent = "Off";
+      }
+    }
+  </script>
+</body>
+</html>
